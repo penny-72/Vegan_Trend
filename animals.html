@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<!--
+	Phase Shift by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Animals - VEGAN TREND by Penny</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
+		<!--	
+		___________________________________________________________
+   
+	                   killcounter-code.html
+	      XGB Web and Software Design ~ www.xgbdesign.com
+
+		  N.B.: This code was substantially modified in July 2011.
+		___________________________________________________________
+		-->
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="revised" content="2012.10.10" />
+		<meta name="ADAPTT" content="Animals Deserve Absolute Protection Today and Tomorrow" />
+		<meta name="keywords" content="ADAPTT, animal rights, veganism, Gary Yourofsky, fight speciesism, fight animal abuse" />
+		<meta name="description" content="This page incorporates the basic XHTML, CSS, and JavaScript source code for the 
+		ADAPTT Kill Counter. This code is a modification of code produced by Action for Animals and SFVegan." />
+
+		<!--<title>The Animal Kill Counter: Basic Version &lt;&lt; ADAPTT :: Animals Deserve Absolute Protection Today and Tomorrow</title>-->
+		<link rel="shortcut icon" href="grfx/main/a.ico" />
+
+		<!-- Add JavaScript variables and functions for the ADAPTT Kill Counter: -->
+		<script>
+
+			// Global variables: ___________________________________________________________________
+
+			var counts = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
+			var rate = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
+		
+			// Functions: __________________________________________________________________________
+		
+			function StartKillCounter() {
+				var millions = [ 90000, 45895, 2262, 1244, 857, 691, 533, 515, 345, 292, 65, 63, 23, 16, 4, 4, 3, 2 ];
+				var perSecond = 8;
+				for (var i = 0; i < counts.length; ++i) 
+					rate[i] = millions[i] * 1000000 / 365 / 24 / 60 / 60 / perSecond;
+				setInterval(NewCounts, 1000 / perSecond);
+			}
+		
+			function NewCounts() {
+				var num, thous, str;
+				for (var i = 0; i < counts.length; ++i) {
+					counts[i] += rate[i];
+					num = Math.round(counts[i]);
+					str = "";
+					while (num > 1000) {
+						thous = num % 1000;
+						if (thous < 10)
+							thous = "00" + thous;
+						else if (thous < 100)
+							thous = "0" + thous;
+						str = "," + thous + str;
+						num = Math.floor(num / 1000);
+					}
+					str = num + str;
+					document.getElementById("count" + i).innerHTML = str;
+				}
+			}
+		</script>
+
+		<!-- Add local CSS for the ADAPTT Kill Counter. 
+			  Please Note: This code block MUST contain AT MINIMUM the following code: -->
+		<style type="text/css">
+			span#count0, span#count1, span#count2, span#count3, span#count4, span#count5, 
+			span#count6, span#count7, span#count8, span#count9, span#count10, span#count11, 
+			span#count12, span#count13, span#count14, span#count15, span#count16, span#count17 { 
+				display: inline; 
+			}
+		</style>
+
+		<!-- Begin Google Analytics code: -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			
+			ga('create', 'UA-44763726-1', 'adaptt.org');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div class="wrapper style1">
+
+				<!-- Header -->
+					<div id="header" class="skel-panels-fixed">
+						<div id="logo">
+							<h1><a href="index.html">純素趨勢 VEGAN TREND</a></h1>
+							<span class="tag">by Penny</span>
+						</div>
+						<nav id="nav">
+							<ul>
+								<li class="active"><a href="index.html">首頁 Homepage</a></li>
+								<li><a href="environment.html">環境 Environment</a></li>
+								<li><a href="animals.html">動物 Animals</a></li>
+								<li><a href="health.html">健康 Health</a></li>
+								<li><a href="celebrities.html">名人 Celebrities</a></li>
+								<li><a href="links.html">連結 Links</a></li>
+							</ul>
+						</nav>
+					</div>
+				<!-- Header -->
+
+				<!-- Page -->
+					<div id="page" class="container">
+						<div class="row">
+		
+							<!-- Sidebar -->
+							<div id="sidebar" class="4u">
+								<!--<section>
+									<header class="major">
+										<h2>Etiam malesuada</h2>
+									</header>
+									<div class="row half">
+										<section class="6u">
+											<ul class="default">
+												<li><a href="#">Donec facilisis tempor</a></li>
+												<li><a href="#">Nulla convallis cursus</a></li>
+												<li><a href="#">Integer congue euis</a></li>
+												<li><a href="#">Venenatis vulputate</a></li>
+												<li><a href="#">Morbi ligula volutpat</a></li>
+											</ul>
+										</section>
+										<section class="6u">
+											<ul class="default small">
+												<li><a href="#">Donec facilisis tempor</a></li>
+												<li><a href="#">Nulla convallis cursus</a></li>
+												<li><a href="#">Integer congue euis</a></li>
+												<li><a href="#">Venenatis vulputate</a></li>
+												<li><a href="#">Morbi ligula volutpat</a></li>
+											</ul>
+										</section>
+									</div>
+								</section>-->
+
+								<!-- Begin the ADAPTT Kill Counter: -->
+										<h4>Animals Slaughtered:</h4>
+										<p>
+											<span id="count0">0</span>&nbsp;marine animals<br />
+											<span id="count1">0</span>&nbsp;chickens<br />
+											<span id="count2">0</span>&nbsp;ducks<br />
+											<span id="count3">0</span>&nbsp;pigs<br />
+											<span id="count4">0</span>&nbsp;rabbits<br />
+											<span id="count5">0</span>&nbsp;turkeys<br />
+											<span id="count6">0</span>&nbsp;geese<br />
+											<span id="count7">0</span>&nbsp;sheep<br />
+											<span id="count8">0</span>&nbsp;goats<br />
+											<span id="count9">0</span>&nbsp;cows and calves<br />
+											<span id="count10">0</span>&nbsp;rodents<br />
+											<span id="count11">0</span>&nbsp;pigeons and other birds<br />
+											<span id="count12">0</span>&nbsp;buffaloes<br />
+											<span id="count13">0</span>&nbsp;dogs<br />
+											<span id="count14">0</span>&nbsp;cats<br />
+											<span id="count15">0</span>&nbsp;horses<br />
+											<span id="count16">0</span>&nbsp;donkeys and mules<br />
+											<span id="count17">0</span>&nbsp;camels and other camelids
+										</p>
+
+										<script>
+											StartKillCounter();
+										</script>
+
+								<section>
+									<header class="major">
+										<h2>Mauris vulputate</h2>
+									</header>
+									<ul class="default">
+										<li><a href="#">Pellentesque lectus gravida blandit</a></li>
+										<li><a href="#">Lorem ipsum consectetuer adipiscing</a></li>
+										<li><a href="#">Phasellus nibh pellentesque congue</a></li>
+										<li><a href="#">Cras vitae metus aliquam pharetra</a></li>
+										<li><a href="#">Maecenas vitae orci feugiat eleifend</a></li>
+										<li><a href="#">Phasellus nibh pellentesque congue</a></li>
+										<li><a href="#">Cras vitae metus aliquam pharetra</a></li>
+									</ul>
+								</section>
+							</div>
+							
+							<!-- Content -->
+							<div id="content" class="8u skel-cell-important">
+								<section>
+									<header class="major">
+										<h2>純素飲食對動物產生的影響</h2>
+										<span class="byline">The impact of being vegan on animals.</span>
+									</header>
+									
+									<p></p>
+									<p></p>
+									<p></p>
+								</section>
+							</div>
+		
+						</div>
+					</div>
+				<!-- /Page -->
+
+				
+
+	</div>
+
+	
+	<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+			    <div class="copyright">
+					<p>Contact: <a href="mailto:penny103131@gmail.com">penny103131@gmail.com</a></p>
+					<!--<ul class="icons">
+						<li><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
+						<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
+						<li><a href="#" class="fa fa-google-plus"><span>Google+</span></a></li>
+					</ul>-->
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
