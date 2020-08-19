@@ -23,85 +23,7 @@
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 
-		<!--	
-		___________________________________________________________
-   
-	                   killcounter-code.html
-	      XGB Web and Software Design ~ www.xgbdesign.com
-
-		  N.B.: This code was substantially modified in July 2011.
-		___________________________________________________________
-		-->
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="revised" content="2012.10.10" />
-		<meta name="ADAPTT" content="Animals Deserve Absolute Protection Today and Tomorrow" />
-		<meta name="keywords" content="ADAPTT, animal rights, veganism, Gary Yourofsky, fight speciesism, fight animal abuse" />
-		<meta name="description" content="This page incorporates the basic XHTML, CSS, and JavaScript source code for the 
-		ADAPTT Kill Counter. This code is a modification of code produced by Action for Animals and SFVegan." />
-
-		<!--<title>The Animal Kill Counter: Basic Version &lt;&lt; ADAPTT :: Animals Deserve Absolute Protection Today and Tomorrow</title>-->
-		<link rel="shortcut icon" href="grfx/main/a.ico" />
-
-		<!-- Add JavaScript variables and functions for the ADAPTT Kill Counter: -->
-		<script>
-
-			// Global variables: ___________________________________________________________________
-
-			var counts = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
-			var rate = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
 		
-			// Functions: __________________________________________________________________________
-		
-			function StartKillCounter() {
-				var millions = [ 90000, 45895, 2262, 1244, 857, 691, 533, 515, 345, 292, 65, 63, 23, 16, 4, 4, 3, 2 ];
-				var perSecond = 8;
-				for (var i = 0; i < counts.length; ++i) 
-					rate[i] = millions[i] * 1000000 / 365 / 24 / 60 / 60 / perSecond;
-				setInterval(NewCounts, 1000 / perSecond);
-			}
-		
-			function NewCounts() {
-				var num, thous, str;
-				for (var i = 0; i < counts.length; ++i) {
-					counts[i] += rate[i];
-					num = Math.round(counts[i]);
-					str = "";
-					while (num > 1000) {
-						thous = num % 1000;
-						if (thous < 10)
-							thous = "00" + thous;
-						else if (thous < 100)
-							thous = "0" + thous;
-						str = "," + thous + str;
-						num = Math.floor(num / 1000);
-					}
-					str = num + str;
-					document.getElementById("count" + i).innerHTML = str;
-				}
-			}
-		</script>
-
-		<!-- Add local CSS for the ADAPTT Kill Counter. 
-			  Please Note: This code block MUST contain AT MINIMUM the following code: -->
-		<style type="text/css">
-			span#count0, span#count1, span#count2, span#count3, span#count4, span#count5, 
-			span#count6, span#count7, span#count8, span#count9, span#count10, span#count11, 
-			span#count12, span#count13, span#count14, span#count15, span#count16, span#count17 { 
-				display: inline; 
-			}
-		</style>
-
-		<!-- Begin Google Analytics code: -->
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			
-			ga('create', 'UA-44763726-1', 'adaptt.org');
-			ga('send', 'pageview');
-		</script>
 	</head>
 	<body>
 
@@ -133,71 +55,18 @@
 		
 							<!-- Sidebar -->
 							<div id="sidebar" class="4u">
-								<!--<section>
-									<header class="major">
-										<h2>Etiam malesuada</h2>
-									</header>
-									<div class="row half">
-										<section class="6u">
-											<ul class="default">
-												<li><a href="#">Donec facilisis tempor</a></li>
-												<li><a href="#">Nulla convallis cursus</a></li>
-												<li><a href="#">Integer congue euis</a></li>
-												<li><a href="#">Venenatis vulputate</a></li>
-												<li><a href="#">Morbi ligula volutpat</a></li>
-											</ul>
-										</section>
-										<section class="6u">
-											<ul class="default small">
-												<li><a href="#">Donec facilisis tempor</a></li>
-												<li><a href="#">Nulla convallis cursus</a></li>
-												<li><a href="#">Integer congue euis</a></li>
-												<li><a href="#">Venenatis vulputate</a></li>
-												<li><a href="#">Morbi ligula volutpat</a></li>
-											</ul>
-										</section>
-									</div>
-								</section>-->
+								
 
-								<!-- Begin the ADAPTT Kill Counter: -->
-										<h4>Animals Slaughtered:</h4>
-										<p>
-											<span id="count0">0</span>&nbsp;marine animals<br />
-											<span id="count1">0</span>&nbsp;chickens<br />
-											<span id="count2">0</span>&nbsp;ducks<br />
-											<span id="count3">0</span>&nbsp;pigs<br />
-											<span id="count4">0</span>&nbsp;rabbits<br />
-											<span id="count5">0</span>&nbsp;turkeys<br />
-											<span id="count6">0</span>&nbsp;geese<br />
-											<span id="count7">0</span>&nbsp;sheep<br />
-											<span id="count8">0</span>&nbsp;goats<br />
-											<span id="count9">0</span>&nbsp;cows and calves<br />
-											<span id="count10">0</span>&nbsp;rodents<br />
-											<span id="count11">0</span>&nbsp;pigeons and other birds<br />
-											<span id="count12">0</span>&nbsp;buffaloes<br />
-											<span id="count13">0</span>&nbsp;dogs<br />
-											<span id="count14">0</span>&nbsp;cats<br />
-											<span id="count15">0</span>&nbsp;horses<br />
-											<span id="count16">0</span>&nbsp;donkeys and mules<br />
-											<span id="count17">0</span>&nbsp;camels and other camelids
-										</p>
-
-										<script>
-											StartKillCounter();
-										</script>
-
+								
 								<section>
 									<header class="major">
-										<h2>Mauris vulputate</h2>
+										<h2>農場的真相</h2>
+										<span class="byline">The truth of farms.</span>
 									</header>
 									<ul class="default">
-										<li><a href="#">Pellentesque lectus gravida blandit</a></li>
-										<li><a href="#">Lorem ipsum consectetuer adipiscing</a></li>
-										<li><a href="#">Phasellus nibh pellentesque congue</a></li>
-										<li><a href="#">Cras vitae metus aliquam pharetra</a></li>
-										<li><a href="#">Maecenas vitae orci feugiat eleifend</a></li>
-										<li><a href="#">Phasellus nibh pellentesque congue</a></li>
-										<li><a href="#">Cras vitae metus aliquam pharetra</a></li>
+										<li><a href="#">那些我看見的事<br>What Cody Saw Will Change Your Life</a></li>
+										<li><a href="#">霍格伍德:一個現代恐怖故事<br>Hogwood: a modern horror story</a></li>
+										<li><a href="#">動物屠殺計數器<br>The Animal Kill Counter</a></li>
 									</ul>
 								</section>
 							</div>
@@ -206,13 +75,18 @@
 							<div id="content" class="8u skel-cell-important">
 								<section>
 									<header class="major">
-										<h2>純素飲食對動物產生的影響</h2>
-										<span class="byline">The impact of being vegan on animals.</span>
+										<h2>得知何為生命而純素</h2>
+										<span class="byline">After knowing what is live,we become vegan.</span>
 									</header>
+
+									<p>柯迪對於網路上動物受虐的影片充滿懷疑，想確認「農場究竟是如何對待動物」而親自到農場臥底調查。沒想到這段刻骨銘心的經歷，徹底改變了柯迪的人生方向與目標。現今，他已成為一名動物律師為動物朋友伸張正義。</p>
+
+									<iframe width="280" height="200" src="https://www.youtube.com/embed/9a0q1YM6i1A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+									<p>▲ 那些我看見的事｜What Cody Saw Will Change Your Life</p>
 									
-									<p></p>
-									<p></p>
-									<p></p>
+									
+									
 								</section>
 							</div>
 		
