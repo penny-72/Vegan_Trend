@@ -426,7 +426,7 @@
 		-o-transition: background-color 0.35s ease-in-out;
 		-ms-transition: background-color 0.35s ease-in-out;
 		transition: background-color 0.35s ease-in-out;
-		background: #d84780;
+		background: #9acd32;
 		border-radius: 6px;
 		border: 0;
 		color: white;
@@ -446,7 +446,7 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			background: #e1719d;
+			background: #f0e68c;
 		}
 
 		input[type="submit"].alt,
